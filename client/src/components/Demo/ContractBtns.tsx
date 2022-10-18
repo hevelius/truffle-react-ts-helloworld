@@ -1,20 +1,27 @@
 import { useState } from "react";
+import { HelloWorld } from "../../../../backend/types/web3-v1-contracts/HelloWorld";
 import useEth from "../../contexts/EthContext/useEth";
 
-function ContractBtns({ setValue }) {
-  const { state: { contract, accounts } } = useEth();
+type Props = {
+  setValue: (value: string) => void;
+}
+const ContractBtns = (props: Props) => {
+  const { contract, accounts } = useEth();
   const [inputValue, setInputValue] = useState("");
 
-  const handleInputChange = e => {
+  const handleInputChange = (e: any) => {
       setInputValue(e.target.value);
   };
 
   const read = async () => {
-    const value = await contract.methods.getHelloWorld().call({ from: accounts[0] });
-    setValue(value);
+    if (contract !== null && accounts !== null) {
+      const instance: HelloWorld = contract;
+      const value = await instance.methods.getHelloWorld().call({ from: accounts[0] });
+      props.setValue(value);
+    }
   };
 
-  const write = async e => {
+  const write = async (e: any) => {
     if (e.target.tagName === "INPUT") {
       return;
     }
@@ -23,7 +30,11 @@ function ContractBtns({ setValue }) {
       return;
     }
     const newValue =inputValue;
-    await contract.methods.setHelloWorld(newValue).send({ from: accounts[0] });
+    if (contract !== null && accounts !== null){
+      const instance: HelloWorld = contract;
+      await instance.methods.setHelloWorld(newValue).send({ from: accounts[0] });
+    }
+
   };
 
   return (

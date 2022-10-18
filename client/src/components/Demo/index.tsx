@@ -8,8 +8,8 @@ import NoticeNoArtifact from "./NoticeNoArtifact";
 import NoticeWrongNetwork from "./NoticeWrongNetwork";
 
 function Demo() {
-  const { state } = useEth();
-  const [value, setValue] = useState("?");
+  const { artifact, contract } = useEth();
+  const [value, setValue] = useState("");
 
   const demo =
     <>
@@ -25,8 +25,8 @@ function Demo() {
     <div className="demo">
       <Title />
       {
-        !state.artifact ? <NoticeNoArtifact /> :
-          !state.contract ? <NoticeWrongNetwork /> :
+        !artifact ? <NoticeNoArtifact /> :
+          !contract ? <NoticeWrongNetwork /> :
             demo
       }
     </div>

@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "A Proof Of Concept Dapp to show royalties purposes in collecting societies",
+  "main": "truffle-config.js",
+  "scripts": {
+    "prettier": "prettier --write .",
+    "test": "truffle test",
+    "generate-types": "typechain --target=truffle-v5 '../client/src/contracts/*.json'",
+    "coverage": "truffle run coverage",
+    "migrate": "tsc -p ./tsconfig.migrate.json --outDir migrations && truffle migrate",
+    "generate-types-client": "typechain --target=web3-v1 '../client/src/contracts/*.json'",
+    "postinstall": "truffle compile && yarn generate-types && yarn generate-types-client"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.10"
+  },
+  "devDependencies": {
+    "npx-run": "^2.1.2",
+    "prettier": "2.7.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
+    "@typechain/truffle-v5": "^8.0.1",
+    "@typechain/web3-v1": "^6.0.1",
+    "@types/bn.js": "^5.1.1",
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^10.0.0",
+    "@types/web3": "^1.2.2",
+    "ganache-cli": "^6.12.2",
+    "solidity-coverage": "^0.8.2",
+    "truffle-typings": "^1.0.8",
+    "typechain": "^8.1.0",
+    "typescript": "^4.8.4"
+  },
+  "author": "hevelius",
+  "license": "MIT"
+}

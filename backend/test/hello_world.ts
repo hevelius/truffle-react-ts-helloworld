@@ -5,8 +5,8 @@ const HelloWorld = artifacts.require("HelloWorld");
  * Ethereum client
  * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
  */
-contract("HelloWorld", function (/* accounts */) {
-  it("should assert true", async function () {
+contract("HelloWorld", (/* accounts */) => {
+  it("should assert true", async () => {
     await HelloWorld.deployed();
     return assert.isTrue(true);
   });

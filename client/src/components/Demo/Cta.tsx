@@ -1,4 +1,4 @@
-function Cta() {
+const Cta = () => {
   return (
     <p>
       Try changing&nbsp;

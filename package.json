@@ -1,0 +1,13 @@
+{
+    "name": "truffle-react-ts-hello-world",
+    "private": true,
+    "workspaces": {
+      "packages": [
+        "backend",
+        "client"
+      ],
+      "nohoist": [
+        "client/**"
+      ]
+    }
+  }

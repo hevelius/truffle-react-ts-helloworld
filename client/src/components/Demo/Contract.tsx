@@ -1,6 +1,4 @@
-function Contract() {
-
-  return (
+const Contract = () => (
     <code>
       {`contract HelloWorld {
   string private greeter;
@@ -19,6 +17,5 @@ function Contract() {
 }`}
     </code>
   );
-}
 
 export default Contract;
