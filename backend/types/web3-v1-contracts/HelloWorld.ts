@@ -2,10 +2,10 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type BN from "bn.js"
-import type { ContractOptions } from "web3-eth-contract"
-import type { EventLog } from "web3-core"
-import type { EventEmitter } from "events"
+import type BN from "bn.js";
+import type { ContractOptions } from "web3-eth-contract";
+import type { EventLog } from "web3-core";
+import type { EventEmitter } from "events";
 import type {
   Callback,
   PayableTransactionObject,
@@ -13,12 +13,12 @@ import type {
   BlockType,
   ContractEventLog,
   BaseContract,
-} from "./types"
+} from "./types";
 
 export interface EventOptions {
-  filter?: object
-  fromBlock?: BlockType
-  topics?: string[]
+  filter?: object;
+  fromBlock?: BlockType;
+  topics?: string[];
 }
 
 export interface HelloWorld extends BaseContract {
@@ -26,14 +26,14 @@ export interface HelloWorld extends BaseContract {
     jsonInterface: any[],
     address?: string,
     options?: ContractOptions
-  ): HelloWorld
-  clone(): HelloWorld
+  ): HelloWorld;
+  clone(): HelloWorld;
   methods: {
-    getHelloWorld(): NonPayableTransactionObject<string>
+    getHelloWorld(): NonPayableTransactionObject<string>;
 
-    setHelloWorld(helloText: string): NonPayableTransactionObject<void>
-  }
+    setHelloWorld(helloText: string): NonPayableTransactionObject<void>;
+  };
   events: {
-    allEvents(options?: EventOptions, cb?: Callback<EventLog>): EventEmitter
-  }
+    allEvents(options?: EventOptions, cb?: Callback<EventLog>): EventEmitter;
+  };
 }

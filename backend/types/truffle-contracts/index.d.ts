@@ -2,14 +2,14 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import { HelloWorldContract } from "./HelloWorld"
+import { HelloWorldContract } from "./HelloWorld";
 
 declare global {
   namespace Truffle {
     interface Artifacts {
-      require(name: "HelloWorld"): HelloWorldContract
+      require(name: "HelloWorld"): HelloWorldContract;
     }
   }
 }
 
-export { HelloWorldContract, HelloWorldInstance } from "./HelloWorld"
+export { HelloWorldContract, HelloWorldInstance } from "./HelloWorld";

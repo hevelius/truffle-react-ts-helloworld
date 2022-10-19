@@ -2,61 +2,68 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import BN from "bn.js"
-import { EventData, PastEventOptions } from "web3-eth-contract"
+import BN from "bn.js";
+import { EventData, PastEventOptions } from "web3-eth-contract";
 
-export interface HelloWorldContract extends Truffle.Contract<HelloWorldInstance> {
-  "new"(meta?: Truffle.TransactionDetails): Promise<HelloWorldInstance>
+export interface HelloWorldContract
+  extends Truffle.Contract<HelloWorldInstance> {
+  "new"(meta?: Truffle.TransactionDetails): Promise<HelloWorldInstance>;
 }
 
-type AllEvents = never
+type AllEvents = never;
 
 export interface HelloWorldInstance extends Truffle.ContractInstance {
-  getHelloWorld(txDetails?: Truffle.TransactionDetails): Promise<string>
+  getHelloWorld(txDetails?: Truffle.TransactionDetails): Promise<string>;
 
   setHelloWorld: {
     (helloText: string, txDetails?: Truffle.TransactionDetails): Promise<
       Truffle.TransactionResponse<AllEvents>
-    >
-    call(helloText: string, txDetails?: Truffle.TransactionDetails): Promise<void>
+    >;
+    call(
+      helloText: string,
+      txDetails?: Truffle.TransactionDetails
+    ): Promise<void>;
     sendTransaction(
       helloText: string,
       txDetails?: Truffle.TransactionDetails
-    ): Promise<string>
+    ): Promise<string>;
     estimateGas(
       helloText: string,
       txDetails?: Truffle.TransactionDetails
-    ): Promise<number>
-  }
+    ): Promise<number>;
+  };
 
   methods: {
-    getHelloWorld(txDetails?: Truffle.TransactionDetails): Promise<string>
+    getHelloWorld(txDetails?: Truffle.TransactionDetails): Promise<string>;
 
     setHelloWorld: {
       (helloText: string, txDetails?: Truffle.TransactionDetails): Promise<
         Truffle.TransactionResponse<AllEvents>
-      >
-      call(helloText: string, txDetails?: Truffle.TransactionDetails): Promise<void>
+      >;
+      call(
+        helloText: string,
+        txDetails?: Truffle.TransactionDetails
+      ): Promise<void>;
       sendTransaction(
         helloText: string,
         txDetails?: Truffle.TransactionDetails
-      ): Promise<string>
+      ): Promise<string>;
       estimateGas(
         helloText: string,
         txDetails?: Truffle.TransactionDetails
-      ): Promise<number>
-    }
-  }
+      ): Promise<number>;
+    };
+  };
 
-  getPastEvents(event: string): Promise<EventData[]>
+  getPastEvents(event: string): Promise<EventData[]>;
   getPastEvents(
     event: string,
     options: PastEventOptions,
     callback: (error: Error, event: EventData) => void
-  ): Promise<EventData[]>
-  getPastEvents(event: string, options: PastEventOptions): Promise<EventData[]>
+  ): Promise<EventData[]>;
+  getPastEvents(event: string, options: PastEventOptions): Promise<EventData[]>;
   getPastEvents(
     event: string,
     callback: (error: Error, event: EventData) => void
-  ): Promise<EventData[]>
+  ): Promise<EventData[]>;
 }
