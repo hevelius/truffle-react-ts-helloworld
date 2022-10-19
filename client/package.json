@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+    "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md|ts|tsx)\""
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +47,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "install": "^0.13.0",
+    "eslint-plugin-react": "^7.31.10",
     "prettier": "^2.7.1"
   }
 }

@@ -6,7 +6,7 @@ const Cta = () => {
       &nbsp;in&nbsp;
       <span className="code">HelloWorld</span>.
     </p>
-  );
+  )
 }
 
-export default Cta;
+export default Cta

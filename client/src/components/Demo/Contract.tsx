@@ -1,6 +1,6 @@
 const Contract = () => (
-    <code>
-      {`contract HelloWorld {
+  <code>
+    {`contract HelloWorld {
   string private greeter;
 
   constructor() {
@@ -15,7 +15,7 @@ const Contract = () => (
       greeter = helloText;
   }
 }`}
-    </code>
-  );
+  </code>
+)
 
-export default Contract;
+export default Contract

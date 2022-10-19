@@ -1,17 +1,17 @@
-import { useState } from "react";
-import useEth from "../../contexts/EthContext/useEth";
-import Title from "./Title";
-import Cta from "./Cta";
-import Contract from "./Contract";
-import ContractBtns from "./ContractBtns";
-import NoticeNoArtifact from "./NoticeNoArtifact";
-import NoticeWrongNetwork from "./NoticeWrongNetwork";
+import { useState } from "react"
+import useEth from "../../contexts/EthContext/useEth"
+import Title from "./Title"
+import Cta from "./Cta"
+import Contract from "./Contract"
+import ContractBtns from "./ContractBtns"
+import NoticeNoArtifact from "./NoticeNoArtifact"
+import NoticeWrongNetwork from "./NoticeWrongNetwork"
 
 function Demo() {
-  const { artifact, contract } = useEth();
-  const [value, setValue] = useState("");
+  const { artifact, contract } = useEth()
+  const [value, setValue] = useState("")
 
-  const demo =
+  const demo = (
     <>
       <Cta />
       <div className="contract-container">
@@ -19,18 +19,15 @@ function Demo() {
         <ContractBtns setValue={setValue} />
       </div>
       {value}
-    </>;
+    </>
+  )
 
   return (
     <div className="demo">
       <Title />
-      {
-        !artifact ? <NoticeNoArtifact /> :
-          !contract ? <NoticeWrongNetwork /> :
-            demo
-      }
+      {!artifact ? <NoticeNoArtifact /> : !contract ? <NoticeWrongNetwork /> : demo}
     </div>
-  );
+  )
 }
 
-export default Demo;
+export default Demo
