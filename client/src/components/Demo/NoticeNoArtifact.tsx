@@ -1,4 +1,6 @@
-const NoticeNoArtifact = () => {
+import React from "react";
+
+const NoticeNoArtifact = ():React.ReactElement => {
   return (
     <p>
       Cannot find <span className="code">HelloWorld</span> contract artifact. Please

@@ -10,6 +10,7 @@
 !.vscode/*.code-snippets
 
 client/src/contracts
+backend/types
 
 # Local History for Visual Studio Code
 .history/

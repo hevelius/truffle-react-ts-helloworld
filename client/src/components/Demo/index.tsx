@@ -1,4 +1,5 @@
 import { useState } from "react"
+import React from "react";
 import useEth from "../../contexts/EthContext/useEth"
 import Title from "./Title"
 import Cta from "./Cta"
@@ -7,7 +8,7 @@ import ContractBtns from "./ContractBtns"
 import NoticeNoArtifact from "./NoticeNoArtifact"
 import NoticeWrongNetwork from "./NoticeWrongNetwork"
 
-function Demo() {
+const Demo = ():React.ReactElement => {
   const { artifact, contract } = useEth()
   const [value, setValue] = useState("")
 

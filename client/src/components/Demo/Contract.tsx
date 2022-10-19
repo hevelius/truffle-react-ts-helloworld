@@ -1,4 +1,6 @@
-const Contract = () => (
+import React from "react";
+
+const Contract = ():React.ReactElement => (
   <code>
     {`contract HelloWorld {
   string private greeter;

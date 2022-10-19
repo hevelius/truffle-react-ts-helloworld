@@ -1,11 +1,13 @@
+import React from "react";
 import { useState } from "react"
 import { HelloWorld } from "../../../../backend/types/web3-v1-contracts/HelloWorld"
 import useEth from "../../contexts/EthContext/useEth"
 
 type Props = {
-  setValue: (value: string) => void
+  setValue: (value: string) => void; // eslint-disable-line no-unused-vars
 }
-const ContractBtns = (props: Props) => {
+
+const ContractBtns = (props: Props):React.ReactElement => {
   const { contract, accounts } = useEth()
   const [inputValue, setInputValue] = useState("")
 

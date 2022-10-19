@@ -1,4 +1,6 @@
-const Cta = () => {
+import React from "react";
+
+const Cta = ():React.ReactElement => {
   return (
     <p>
       Try changing&nbsp;
