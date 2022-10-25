@@ -11,7 +11,7 @@
     "generate-types": "typechain --target=truffle-v5 './build/contracts/*.json'",
     "generate-types-client": "typechain --target=web3-v1 './build/contracts/*.json'",
     "postinstall": "truffle compile && yarn generate-types && yarn generate-types-client",
-    "ganache-cli": "ganache-cli -p 7545 --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize -e 1000000000 > /dev/null &"
+    "ganache-cli": "ganache-cli -p 8545 --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize -e 1000000000 > /dev/null &"
   },
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.10"
