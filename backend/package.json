@@ -7,11 +7,11 @@
     "test": "truffle test",
     "coverage": "truffle run coverage",
     "typecheck": "tsc --noEmit",
-    "migrate": "tsc -p ./tsconfig.migrate.json --outDir migrations",
+    "migrate": "tsc -p ./tsconfig.migrate.json --outDir migrations && truffle migrate",
     "generate-types": "typechain --target=truffle-v5 './build/contracts/*.json'",
     "generate-types-client": "typechain --target=web3-v1 './build/contracts/*.json'",
     "postinstall": "truffle compile && yarn generate-types && yarn generate-types-client",
-    "ganache-cli": "ganache-cli -p 8545 --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize -e 1000000000 > /dev/null &"
+    "ganache-cli": "ganache-cli -p 7545 --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize -e 1000000000 > /dev/null &"
   },
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.10"
@@ -25,8 +25,7 @@
     "@types/web3": "^1.2.2",
     "ganache-cli": "^6.12.2",
     "solidity-coverage": "^0.7.17",
-    "ts-node": "^10.9.1",
-    "truffle": "^5.4.26",
+    "truffle": "5.4.27",
     "truffle-typings": "^1.0.8",
     "typechain": "^6.1.0",
     "typescript": "^4.5.4"
