@@ -51,7 +51,7 @@ jobs:
         while netstat -lnt | awk '$4 ~ /:8545/ {exit 1}'; do sleep 5; done
     - name: Contract Migration
       run: yarn workspace backend migrate
-    - name: Conract Test
+    - name: Contract Test
       run: yarn workspace backend test
     - name: Contract Coverage
       run: yarn workspace backend coverage
