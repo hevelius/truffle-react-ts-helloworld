@@ -63,7 +63,7 @@ jobs:
         path-to-lcov: ./backend/coverage/lcov.info
         parallel: true
     - name: Stop ganache
-      run: kill $(lsof -t -i:7545)
+      run: kill $(lsof -t -i:8545)
 
   client:
     runs-on: ubuntu-latest
