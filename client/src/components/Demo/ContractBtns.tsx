@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react"
-import { HelloWorld } from "../../../../backend/types/web3-v1-contracts/HelloWorld"
+import { HelloWorld } from "backend/types/web3-v1-contracts/HelloWorld"
 import useEth from "../../contexts/EthContext/useEth"
 
 type Props = {

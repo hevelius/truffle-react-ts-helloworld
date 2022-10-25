@@ -2,8 +2,8 @@ import React, { useReducer, useCallback, useEffect } from "react"
 import Web3 from "web3"
 import { AbiItem } from "web3-utils"
 import EthContext from "./EthContext"
-import HelloWorldCompiledContract from "../../contracts/HelloWorld.json"
-import { HelloWorld } from "../../../../backend/types/web3-v1-contracts/HelloWorld"
+import HelloWorldCompiledContract from "backend/build/contracts/HelloWorld.json"
+import { HelloWorld } from "backend/types/web3-v1-contracts/HelloWorld"
 import { reducer, actions, initialState } from "../../reducers/state"
 
 type Props = {

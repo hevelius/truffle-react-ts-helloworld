@@ -1,7 +1,3 @@
-# Created by https://www.toptal.com/developers/gitignore/api/solidity,soliditytruffle,macos,react,node
-# Edit at https://www.toptal.com/developers/gitignore?templates=solidity,soliditytruffle,macos,react,node
-
-### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -10,7 +6,18 @@
 !.vscode/*.code-snippets
 
 client/src/contracts
-backend/types
+
+**/build
+
+**/node_modules
+
+**/coverage
+
+/backend/types/truffle-contracts
+/backend/types/web3-v1-contracts
+/backend/migrations/**/*.js
+/backend/migrations/**/*.map
+/backend/coverage.json
 
 # Local History for Visual Studio Code
 .history/

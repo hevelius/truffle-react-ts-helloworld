@@ -61,7 +61,7 @@ module.exports = {
    * $ truffle test --network <network-name>
    */
 
-  contracts_build_directory: "../client/src/contracts",
+  // contracts_build_directory: "../client/src/contracts",
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
@@ -122,6 +122,8 @@ module.exports = {
       // }
     },
   },
+
+  plugins: ["solidity-coverage"],
 
   // Truffle DB is currently disabled by default; to enable it, change enabled:
   // false to enabled: true. The default storage location can also be
