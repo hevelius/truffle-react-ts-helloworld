@@ -5,8 +5,6 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
-client/src/contracts
-
 **/build
 
 **/node_modules
