@@ -48,7 +48,7 @@ jobs:
     - name: Start ganache
       run: |
         yarn workspace backend ganache-cli
-        while netstat -lnt | awk '$4 ~ /:7545/ {exit 1}'; do sleep 5; done
+        while netstat -lnt | awk '$4 ~ /:8545/ {exit 1}'; do sleep 5; done
     - name: Contract Migration
       run: yarn workspace backend migrate
     - name: Conract Test
